@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Artificial Intelligence</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #ffffff;
+            --card-text: #333333;
+            --navbar-bg: #007bff;
+            --navbar-text: #ffffff;
+        }
+
+        .dark-theme {
+            --bg-color: #333333;
+            --text-color: #ffffff;
+            --card-bg: #444444;
+            --card-text: #ffffff;
+            --navbar-bg: #1a1a1a;
+            --navbar-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar {
+            background-color: var(--navbar-bg) !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: var(--navbar-text) !important;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            color: var(--card-text);
+        }
+
+        .jumbotron {
+            background-image: url('https://source.unsplash.com/1600x900/?artificial-intelligence');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .jumbotron-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .jumbotron-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(to right, #007bff, #6610f2);
+            margin: 2rem 0;
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
+        }
+
+        .theme-switch input {
+            display:none;
+        }
+
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+        }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 26px;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">GenAI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#definition">Definition</a></li>
+                <li class="nav-item"><a class="nav-link" href="#uses">Uses in Daily Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="#future">Future of AI</a></li>
+            </ul>
+            <div class="ms-auto d-flex align-items-center">
+                <span class="me-2 text-light">Dark Mode</span>
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="jumbotron jumbotron-fluid py-5">
+    <img src="./images/banner.png" alt="Artificial Intelligence concept image" class="jumbotron-image">
+    <div class="container text-center jumbotron-content">
+        <h1 class="display-4">Generative Artificial Intelligence</h1>
+        <p class="lead">Exploring the world of AI that creates, innovates, and transforms</p>
+    </div>
+</header>
+
+<main class="container my-5">
+    <section id="definition">
+        <h2>What is Generative AI?</h2>
+        <div class="section-divider"></div>
+        <p>Generative Artificial Intelligence refers to AI systems that can create new content, such as text, images, music, or even code. These systems learn patterns from existing data and use that knowledge to generate novel outputs that are similar in style or content to the training data.</p>
+        <p>Unlike traditional AI that focuses on analysis and decision-making based on existing data, generative AI has the capability to produce original content, opening up new possibilities in various fields.</p>
+    </section>
+
+    <section id="uses" class="mt-5">
+        <h2>Uses in Daily Life</h2>
+        <div class="section-divider"></div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="./images/content-creation-ia.png" class="card-img-top" alt="AI Content Creation">
+                    <div class="card-body">
+                        <h5 class="card-title">Content Creation</h5>
+                        <p class="card-text">AI-powered tools for writing assistance, image generation, and music composition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="./images/virtual-assistants.png" class="card-img-top" alt="Virtual Assistant">
+                    <div class="card-body">
+                        <h5 class="card-title">Virtual Assistants</h5>
+                        <p class="card-text">More natural and context-aware conversations with AI assistants like Siri or Alexa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="./images/personalization.png" class="card-img-top" alt="AI Personalization">
+                    <div class="card-body">
+                        <h5 class="card-title">Personalization</h5>
+                        <p class="card-text">Tailored recommendations for products, content, and services based on user preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="future" class="mt-5">
+        <h2>The Future of AI</h2>
+        <div class="section-divider"></div>
+        <p>The future of Generative AI is both exciting and challenging. As these technologies continue to advance, we can expect:</p>
+        <ul class="list-group">
+            <li class="list-group-item">More sophisticated and creative outputs across various domains</li>
+            <li class="list-group-item">Integration of AI in creative industries, potentially changing the nature of human creativity</li>
+            <li class="list-group-item">Ethical considerations and regulations to address concerns about misinformation and content authenticity</li>
+            <li class="list-group-item">Advancements in AI understanding context and generating more coherent long-form content</li>
+            <li class="list-group-item">Potential breakthroughs in scientific research and drug discovery through AI-generated hypotheses</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2023 Generative AI Insights. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('class', currentTheme);
+        if (currentTheme === 'dark-theme') {
+            toggleSwitch.checked = true;
+        }
+    }
+
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('class', 'dark-theme');
+            localStorage.setItem('theme', 'dark-theme');
+        } else {
+            document.documentElement.setAttribute('class', '');
+            localStorage.setItem('theme', 'light-theme');
+        }
+    }
+
+    toggleSwitch.addEventListener('change', switchTheme, false);
+</script>
+</body>
+</html>
+
